@@ -84,7 +84,7 @@ success Revoked login token.
 
 If successful, you can visit your npm account dashboard and see your newly published Snap package.
 
-<img src="tutorial-assets/publish.png" width="492" height="184" alt="Published Snap">
+<img src="tutorial-assets/tutorial-publish.png" width="492" height="184" alt="Published Snap">
 
 Then, any dApp can use the published Snap ID to connect to this Snap: 
 
