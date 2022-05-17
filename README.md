@@ -82,7 +82,7 @@ success Revoked login token.
 ✨  Done in 83.33s.
 ```
 
-If successful, you can visit your npm account dashboard and see your newly published Snap package.
+If successful, you can visit your npm account dashboard and see your newly published Snap package:
 
 <img src="tutorial-assets/tutorial-publish.png" width="492" height="184" alt="Published Snap">
 
