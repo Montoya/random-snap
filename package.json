@@ -1,10 +1,10 @@
 {
-  "name": "@metamask/template-snap",
-  "version": "0.7.0",
-  "description": "The 'Hello, world!' of MetaMask Snaps.",
+  "name": "mystery-snap",
+  "version": "0.9.0",
+  "description": "A simple MetaMask Snap that returns random numbers and answers.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MetaMask/snap-template.git"
+    "url": "https://github.com/Montoya/random-snap.git"
   },
   "license": "MIT",
   "main": "src/index.js",

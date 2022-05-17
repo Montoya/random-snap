@@ -37,7 +37,7 @@
       document.getElementById('content').style.borderWidth = '1px'; 
       document.getElementById('unavailable').style.display = 'block'; 
     }
-    const snapId = `local:${window.location.href}`;
+    const snapId = `npm:mystery-snap`;
 
     const connectButton = document.getElementById('connect')
     const queryText = document.getElementById('questionInput'); 
@@ -76,22 +76,7 @@
         document.getElementById('questionInput').focus(); 
       }
     }
-/*
-    async function getRandom () {
-      try {
-        const response = await ethereum.request({
-          method: 'wallet_invokeSnap',
-          params: [snapId, {
-            method: 'random'
-          }]
-        })
-        alert("Result: " + response)
-      } catch (err) {
-        console.error(err)
-        alert('Problem happened: ' + err.message || err)
-      }
-    }
-*/
+    
     async function getAnswer () {
       try {
         const question = document.getElementById('questionInput').value

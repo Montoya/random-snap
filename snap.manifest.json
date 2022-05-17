@@ -1,18 +1,18 @@
 {
-  "version": "0.7.0",
-  "proposedName": "MetaMask Template Snap",
-  "description": "A MetaMask Snap template.",
+  "version": "0.9.0",
+  "proposedName": "Mystery Snap",
+  "description": "A simple MetaMask Snap that returns random numbers and answers.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MetaMask/snap-template.git"
+    "url": "https://github.com/Montoya/random-snap.git"
   },
   "source": {
-    "shasum": "ugRI+2ippw2w2gNSGWpvCRu5L1LD2j4FWQ+KcO/1dIE=",
+    "shasum": "05E9ZMYL2tHWlHoTF9z4vnDqbxMFw3KfeEvHyfQeMRE=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
         "iconPath": "images/icon.svg",
-        "packageName": "@metamask/template-snap",
+        "packageName": "mystery-snap",
         "registry": "https://registry.npmjs.org/"
       }
     }
