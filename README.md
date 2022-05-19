@@ -46,7 +46,7 @@ You will also need an npm account.
 ```JSON
 {
   "name": "mystery-snap",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "description": "A simple MetaMask Snap that returns random numbers and answers.",
   "repository": {
     "type": "git",
@@ -54,35 +54,43 @@ You will also need an npm account.
   },
 ```
 
+*Make sure that the version numbers in `snap.manifest.json` and `package.json` match.*
+
 ## Publishing
 
 Once your Snap is ready for release, use the following command to publish: 
 
-`yarn publish`
+`npm publish`
 
-The CLI will walk you through bumping the version of your Snap and logging into your npm account to publish it, like so: 
+*If you are running this for the first time, you may have to log in via the command line, then run this command again.*
+
+You should see output like this: 
 
 ```Bash
-yarn publish v1.22.18
-[1/4] Bumping version...
-info Current version: 0.9.0
-question New version: 1.0.0
-info New version: 1.0.0
-[2/4] Logging in...
-question npm username: [YOUR USERNAME]]
-question npm email: [YOUR EMAIL]
-question npm password: [YOUR PASSWORD]
-info Two factor authentication enabled.
-question npm one-time password: [YOUR OTP]
-success Logged in.
-[3/4] Publishing...
-success Published.
-[4/4] Revoking token...
-success Revoked login token.
-✨  Done in 83.33s.
+% npm publish
+📦  mystery-snap@1.0.0
+=== Tarball Contents === 
+2.7kB README.md         
+1.7kB dist/bundle.js    
+2.1kB images/icon.svg   
+1.6kB package.json      
+617B  snap.manifest.json
+1.3kB src/index.js      
+=== Tarball Details === 
+name:          mystery-snap                            
+version:       1.0.0                                   
+filename:      mystery-snap-1.0.0.tgz                  
+package size:  3.6 kB                                  
+unpacked size: 10.1 kB                                 
+shasum:        ...
+integrity:     ...
+total files:   6                                       
+
+Publishing to https://registry.npmjs.org/
++ mystery-snap@1.0.0
 ```
 
-If successful, you can visit your npm account dashboard and see your newly published Snap package:
+After publishing, you can visit your npm account dashboard and see your newly published Snap package:
 
 <img src="tutorial-assets/tutorial-publish.png" width="492" height="184" alt="Published Snap">
 
@@ -91,6 +99,10 @@ Then, any dApp can use the published Snap ID to connect to this Snap:
 ```JavaScript
 const snapId = `npm:mystery-snap`;
 ```
+
+MetaMask will automatically fetch the Snap from the npm registry. 
+
+This repository includes a simple dApp website that uses the Snap published to npm. You can try it here: [https://montoya.github.io/random-snap](https://montoya.github.io/random-snap).
 
 ## Acknowledgements
 
