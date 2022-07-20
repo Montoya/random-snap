@@ -17,24 +17,23 @@ const answers = [
   'Unclear, ask again later...',
 ];
 
-wallet.registerRpcMessageHandler(async (originString, requestObject) => {
-  switch (requestObject.method) {
+module.exports.onRpcRequest = async ({ origin, request }) => {
+  switch (request.method) {
     case 'random':
-      if (requestObject.min !== undefined && requestObject.max !== undefined) {
-        const min = parseInt(requestObject.min);
-        const max = parseInt(requestObject.max);
+      if (request.min !== undefined && request.max !== undefined) {
+        const min = parseInt(request.min, 10);
+        const max = parseInt(request.max, 10);
         return Math.floor(Math.random() * (max - min + 1)) + min;
       }
       return Math.random();
     case 'mystery':
-      const mysteryResponse =
-        answers[Math.floor(Math.random() * answers.length)];
+      let mysteryResponse = answers[Math.floor(Math.random() * answers.length)];
       return wallet.request({
         method: 'snap_confirm',
         params: [
           {
             prompt: `The Mysterious 🦊 Has Spoken`,
-            description: `You asked: ${requestObject.question}`,
+            description: `You asked: ${request.question}`,
             textAreaContent: `The mysterious fox says: ${mysteryResponse}`,
           },
         ],
@@ -42,4 +41,4 @@ wallet.registerRpcMessageHandler(async (originString, requestObject) => {
     default:
       throw new Error('Method not found.');
   }
-});
+};
