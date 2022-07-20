@@ -1,5 +1,5 @@
 {
-  "version": "1.0.3",
+  "version": "1.0.4",
   "proposedName": "Mystery Snap",
   "description": "A simple MetaMask Snap that returns random numbers and answers.",
   "repository": {
