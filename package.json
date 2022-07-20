@@ -1,12 +1,12 @@
 {
   "name": "mystery-snap",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A simple MetaMask Snap that returns random numbers and answers.",
   "repository": {
     "type": "git",
     "url": "https://github.com/Montoya/random-snap.git"
   },
-  "license": "(Apache-2.0 AND MIT)",
+  "license": "(Apache-2.0 OR MIT)",
   "main": "src/index.js",
   "files": [
     "dist/",
