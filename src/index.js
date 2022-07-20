@@ -27,7 +27,7 @@ module.exports.onRpcRequest = async ({ origin, request }) => {
       }
       return Math.random();
     case 'mystery':
-      mysteryResponse = answers[Math.floor(Math.random() * answers.length)];
+      let mysteryResponse = answers[Math.floor(Math.random() * answers.length)];
       return wallet.request({
         method: 'snap_confirm',
         params: [
