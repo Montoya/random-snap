@@ -1,6 +1,6 @@
 {
   "name": "mystery-snap",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A simple MetaMask Snap that returns random numbers and answers.",
   "repository": {
     "type": "git",
@@ -48,5 +48,6 @@
   },
   "engines": {
     "node": ">=16.0.0"
-  }
+  },
+  "dependencies": {}
 }

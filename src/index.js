@@ -21,14 +21,13 @@ module.exports.onRpcRequest = async ({ origin, request }) => {
   switch (request.method) {
     case 'random':
       if (request.min !== undefined && request.max !== undefined) {
-        const min = parseInt(request.min);
-        const max = parseInt(request.max);
+        const min = parseInt(request.min, 10);
+        const max = parseInt(request.max, 10);
         return Math.floor(Math.random() * (max - min + 1)) + min;
       }
       return Math.random();
     case 'mystery':
-      const mysteryResponse =
-        answers[Math.floor(Math.random() * answers.length)];
+      mysteryResponse = answers[Math.floor(Math.random() * answers.length)];
       return wallet.request({
         method: 'snap_confirm',
         params: [
