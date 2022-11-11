@@ -43,6 +43,12 @@
     const queryText = document.getElementById('questionInput'); 
     const queryButton = document.getElementById('query')
 
+    document.body.addEventListener('keydown', (e) => {
+      if (e.key === 'r') { 
+        getRandom()
+      }
+    })
+
     connectButton.addEventListener('click', connect)
     queryText.addEventListener('keydown', (e) => {
       if (e.key === 'Enter') { 
@@ -54,12 +60,12 @@
     // here we get permissions to interact with and install the snap
     async function connect () {
       const result = await ethereum.request({
-        method: 'wallet_requestSnaps',
-        params: {
-          [snapId]: {},
-        },
+        method: 'wallet_enable',
+        params: [{
+          wallet_snap: { [snapId]: {} },
+        }]
       })
-
+      
       if(result) { 
         // user is now connected, enable the dApp UI
         var elements = document.getElementsByClassName("disconnected");
@@ -76,7 +82,22 @@
         document.getElementById('questionInput').focus(); 
       }
     }
-    
+
+    async function getRandom () {
+      try {
+        const response = await ethereum.request({
+          method: 'wallet_invokeSnap',
+          params: [snapId, {
+            method: 'random'
+          }]
+        })
+        alert("Result: " + response)
+      } catch (err) {
+        console.error(err)
+        alert('Problem happened: ' + err.message || err)
+      }
+    }
+
     async function getAnswer () {
       try {
         const question = document.getElementById('questionInput').value
@@ -87,7 +108,7 @@
               method: 'mystery', 
               params: {
                 question: question,
-              }, 
+              },
             }]
           })
           document.getElementById('questionInput').value = ''; 
