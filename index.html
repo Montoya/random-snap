@@ -43,6 +43,12 @@
     const queryText = document.getElementById('questionInput'); 
     const queryButton = document.getElementById('query')
 
+    document.body.addEventListener('keydown', (e) => {
+      if (e.key === 'r') { 
+        getRandom()
+      }
+    })
+
     connectButton.addEventListener('click', connect)
     queryText.addEventListener('keydown', (e) => {
       if (e.key === 'Enter') { 
@@ -76,7 +82,7 @@
         document.getElementById('questionInput').focus(); 
       }
     }
-/*
+
     async function getRandom () {
       try {
         const response = await ethereum.request({
@@ -91,7 +97,7 @@
         alert('Problem happened: ' + err.message || err)
       }
     }
-*/
+
     async function getAnswer () {
       try {
         const question = document.getElementById('questionInput').value
@@ -100,7 +106,9 @@
             method: 'wallet_invokeSnap',
             params: [snapId, {
               method: 'mystery', 
-              question: question,
+              params: {
+                question: question,
+              },
             }]
           })
           document.getElementById('questionInput').value = ''; 
