@@ -37,7 +37,7 @@
       document.getElementById('content').style.borderWidth = '1px'; 
       document.getElementById('unavailable').style.display = 'block'; 
     }
-    const snapId = `npm:mystery-snap`;
+    const snapId = `local:${window.location.href}`; // `npm:mystery-snap`;
 
     const connectButton = document.getElementById('connect')
     const queryText = document.getElementById('questionInput'); 
@@ -84,11 +84,8 @@
           const response = await ethereum.request({
             method: 'wallet_invokeSnap',
             params: [snapId, {
-              method: 'mystery', 
-              params: {
-                question: question,
-              }, 
-            }]
+              method: 'hello', 
+            }], 
           })
           document.getElementById('questionInput').value = ''; 
           document.getElementById('questionInput').focus(); 

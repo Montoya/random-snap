@@ -26,6 +26,19 @@ module.exports.onRpcRequest = async ({ origin, request }) => {
         return Math.floor(Math.random() * (max - min + 1)) + min;
       }
       return Math.random();
+    case 'hello':
+        return wallet.request({
+          method: 'snap_confirm',
+          params: [
+            {
+              prompt: `Hello, ${origin}!`,
+              description:
+                'This custom confirmation is just for display purposes.',
+              textAreaContent:
+                'But you can edit the snap source code to make it do something, if you want to!',
+            },
+          ],
+        });
     case 'mystery':
       let mysteryResponse = answers[Math.floor(Math.random() * answers.length)];
       return wallet.request({
@@ -33,7 +46,7 @@ module.exports.onRpcRequest = async ({ origin, request }) => {
         params: [
           {
             prompt: `The Mysterious 🦊 Has Spoken`,
-            description: `You asked: ${request.question}`,
+            description: `You asked: `, // ${request.question}`,
             textAreaContent: `The mysterious fox says: ${mysteryResponse}`,
           },
         ],
