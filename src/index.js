@@ -33,7 +33,7 @@ module.exports.onRpcRequest = async ({ origin, request }) => {
         params: [
           {
             prompt: `The Mysterious 🦊 Has Spoken`,
-            description: `You asked: ${request.question}`,
+            description: `You asked: ${request.params.question}`,
             textAreaContent: `The mysterious fox says: ${mysteryResponse}`,
           },
         ],

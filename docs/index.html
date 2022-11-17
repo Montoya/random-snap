@@ -24,7 +24,7 @@
     <div id="page">
       <div id="content">
         <button class="disconnected" id="connect">Start</button>
-        <h1 class="connected">Ask the mysterious 🦊 a question</h1>
+        <h1 class="connected">Ask the mysterious <span id="fox">🦊</span> a question</h1>
         <p class="connected">&rsaquo; <input type="text" name="question" id="questionInput" value=""> <button id="query">Query</button></p>
         <p id="unavailable">You need MetaMask Flask to use this dapp.<br><a href="https://metamask.io/flask/">Get MetaMask Flask</a></p>
       </div>
@@ -43,10 +43,8 @@
     const queryText = document.getElementById('questionInput'); 
     const queryButton = document.getElementById('query')
 
-    document.body.addEventListener('keydown', (e) => {
-      if (e.key === 'r') { 
-        getRandom()
-      }
+    document.getElementById('fox').addEventListener('click', (e) => {
+      getRandom();
     })
 
     connectButton.addEventListener('click', connect)
