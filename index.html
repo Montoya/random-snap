@@ -57,11 +57,11 @@
 
     // here we get permissions to interact with and install the snap
     async function connect () {
+      let requestParams = {}; 
+      requestParams[snapId] = {}; 
       const result = await ethereum.request({
         method: 'wallet_requestSnaps',
-        params: {
-          snapId: {}
-        },
+        params: requestParams, 
       }); 
       
       if(result) { 

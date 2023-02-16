@@ -30,19 +30,17 @@ module.exports.onRpcRequest = async ({ origin, request }) => {
       return Math.random();
     case 'mystery':
       let mysteryResponse = answers[Math.floor(Math.random() * answers.length)];
-      return wallet.request({
+      return snap.request({
         method: 'snap_dialog',
-        params: [
-          {
-            type: 'Alert', 
-            content: panel([
-              heading(`The Mysterious 🦊 Has Spoken`), 
-              text(`You asked: ${request.params.question}`),
-              divider(),
-              text(`The mysterious fox says: ${mysteryResponse}`),
-            ]), 
-          },
-        ],
+        params: {
+          type: 'Alert',  
+          content: panel([
+            heading(`The Mysterious 🦊 Has Spoken`), 
+            text(`You asked: ${request.params.question}`),
+            divider(),
+            text(`The mysterious fox says: ${mysteryResponse}`),
+          ]), 
+        },
       });
     default:
       throw new Error('Method not found.');
