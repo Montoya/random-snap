@@ -1,3 +1,5 @@
+import { panel, text, divider } from '@metamask/snaps-ui';
+
 const answers = [
   'Certainly',
   'Without a doubt',
@@ -28,15 +30,20 @@ module.exports.onRpcRequest = async ({ origin, request }) => {
       return Math.random();
     case 'mystery':
       let mysteryResponse = answers[Math.floor(Math.random() * answers.length)];
-      return wallet.request({
-        method: 'snap_confirm',
-        params: [
-          {
-            prompt: `The Mysterious 🦊 Has Spoken`,
-            description: `You asked: ${request.params.question}`,
-            textAreaContent: `The mysterious fox says: ${mysteryResponse}`,
-          },
-        ],
+      return snap.request({
+        method: 'snap_dialog',
+        params: {
+          type: 'Alert',  
+          content: panel([
+            text(`**The Mysterious 🦊 Has Spoken**`),
+            divider(), 
+            text('You asked:'), 
+            text(`_${request.params.question}_`),
+            divider(),
+            text('The mysterious fox says:'),
+            text(`**${mysteryResponse}**`),
+          ]), 
+        },
       });
     default:
       throw new Error('Method not found.');

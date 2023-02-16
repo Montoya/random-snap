@@ -57,12 +57,12 @@
 
     // here we get permissions to interact with and install the snap
     async function connect () {
+      let requestParams = {}; 
+      requestParams[snapId] = {}; 
       const result = await ethereum.request({
-        method: 'wallet_enable',
-        params: [{
-          wallet_snap: { [snapId]: {} },
-        }]
-      })
+        method: 'wallet_requestSnaps',
+        params: requestParams, 
+      }); 
       
       if(result) { 
         // user is now connected, enable the dApp UI
@@ -85,14 +85,17 @@
       try {
         const response = await ethereum.request({
           method: 'wallet_invokeSnap',
-          params: [snapId, {
-            method: 'random'
-          }]
-        })
-        alert("Result: " + response)
+          params: { 
+            snapId: snapId, 
+            request: { 
+              method: 'random', 
+            }
+          }
+        }); 
+        alert("Result: " + response); 
       } catch (err) {
-        console.error(err)
-        alert('Problem happened: ' + err.message || err)
+        console.error(err); 
+        alert('Problem happened: ' + err.message || err); 
       }
     }
 
@@ -102,18 +105,21 @@
         if(question.length > 0) { 
           const response = await ethereum.request({
             method: 'wallet_invokeSnap',
-            params: [snapId, {
-              method: 'mystery', 
-              params: {
-                question: question,
-              },
-            }]
-          })
+            params: { 
+              snapId: snapId, 
+              request: { 
+                method: 'mystery', 
+                params: { 
+                  question: question, 
+                }
+              }
+            } 
+          }); 
           document.getElementById('questionInput').value = ''; 
           document.getElementById('questionInput').focus(); 
         }
       } catch (err) {
-        console.error(err)
+        console.error(err); 
       }
     }
   </script>

@@ -1,13 +1,13 @@
 {
-  "version": "1.1.4",
-  "proposedName": "Mystery Snap",
+  "version": "1.2.0",
   "description": "A simple MetaMask Snap that returns random numbers and answers.",
+  "proposedName": "Mystery Snap",
   "repository": {
     "type": "git",
     "url": "https://github.com/Montoya/random-snap.git"
   },
   "source": {
-    "shasum": "yWhsv3tN8yPwqqiC0phHCK8d4J7MMFezKTds7y07XMg=",
+    "shasum": "Ef7ATj55RnGPAFH+Il9Y8ujKu8Wa6X19MmY8eVp1hJI=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
@@ -18,7 +18,11 @@
     }
   },
   "initialPermissions": {
-    "snap_confirm": {}
+    "endowment:rpc": {
+      "dapps": true,
+      "snaps": true
+    },
+    "snap_dialog": {}
   },
   "manifestVersion": "0.1"
 }
