@@ -1,3 +1,5 @@
+import { panel, heading, text, divider } from '@metamask/snaps-ui';
+
 const answers = [
   'Certainly',
   'Without a doubt',
@@ -29,12 +31,16 @@ module.exports.onRpcRequest = async ({ origin, request }) => {
     case 'mystery':
       let mysteryResponse = answers[Math.floor(Math.random() * answers.length)];
       return wallet.request({
-        method: 'snap_confirm',
+        method: 'snap_dialog',
         params: [
           {
-            prompt: `The Mysterious 🦊 Has Spoken`,
-            description: `You asked: ${request.params.question}`,
-            textAreaContent: `The mysterious fox says: ${mysteryResponse}`,
+            type: 'Alert', 
+            content: panel([
+              heading(`The Mysterious 🦊 Has Spoken`), 
+              text(`You asked: ${request.params.question}`),
+              divider(),
+              text(`The mysterious fox says: ${mysteryResponse}`),
+            ]), 
           },
         ],
       });

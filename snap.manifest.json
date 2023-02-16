@@ -1,5 +1,5 @@
 {
-  "version": "1.1.4",
+  "version": "1.1.5",
   "proposedName": "Mystery Snap",
   "description": "A simple MetaMask Snap that returns random numbers and answers.",
   "repository": {
@@ -18,7 +18,11 @@
     }
   },
   "initialPermissions": {
-    "snap_confirm": {}
+    "endowment:rpc": {
+      "dapps": true,
+      "snaps": true
+    }, 
+    "snap_dialog": {}
   },
   "manifestVersion": "0.1"
 }
