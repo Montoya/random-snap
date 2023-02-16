@@ -1,4 +1,4 @@
-import { panel, heading, text, divider } from '@metamask/snaps-ui';
+import { panel, text, divider } from '@metamask/snaps-ui';
 
 const answers = [
   'Certainly',
@@ -35,10 +35,13 @@ module.exports.onRpcRequest = async ({ origin, request }) => {
         params: {
           type: 'Alert',  
           content: panel([
-            heading(`The Mysterious 🦊 Has Spoken`), 
-            text(`You asked: ${request.params.question}`),
+            text(`**The Mysterious 🦊 Has Spoken**`),
+            divider(), 
+            text('You asked:'), 
+            text(`_${request.params.question}_`),
             divider(),
-            text(`The mysterious fox says: ${mysteryResponse}`),
+            text('The mysterious fox says:'),
+            text(`**${mysteryResponse}**`),
           ]), 
         },
       });
