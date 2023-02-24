@@ -49,7 +49,7 @@
     "node": ">=16.0.0"
   },
   "dependencies": {
-    "@metamask/rpc-methods": "^0.29.0",
+    "@metamask/rpc-methods": "^0.30.0",
     "@metamask/snaps-cli": "^0.28.0",
     "@metamask/snaps-types": "^0.29.0",
     "@metamask/snaps-ui": "^0.29.0"
