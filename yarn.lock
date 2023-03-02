@@ -1203,7 +1203,7 @@
     "@metamask/snaps-utils" "^0.28.0"
     convert-source-map "^1.8.0"
 
-"@metamask/snaps-cli@0.28.0":
+"@metamask/snaps-cli@^0.28.0":
   version "0.28.0"
   resolved "https://registry.yarnpkg.com/@metamask/snaps-cli/-/snaps-cli-0.28.0.tgz#e57a8775967173cfc112ff7b3ac5685778a3cea8"
   integrity sha512-NFhRxa/o2cwpf4JdE91BqoIREMt+Aadb8aPkSddLjMYp4NS+GR+v8shElfqsXPTtns/GgBq3ao2fL2yWn2JrZw==
@@ -1315,9 +1315,9 @@
   integrity sha512-EEV/GjlYkOSfSPnYXfOosxa3TqYtIW3fhg6jdw+cok/OhMgNn4wCfbENFqjytrHMU2f7ZKtBAvtiP5V8H44sSw==
 
 "@metamask/utils@^3.3.0", "@metamask/utils@^3.4.0", "@metamask/utils@^3.4.1":
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/@metamask/utils/-/utils-3.5.0.tgz#2b0050baaefff3e42fd75069d9503a18345c0cee"
-  integrity sha512-TqZBbL12VtRL4oz1Z0cubKr4cgxLtLFjgEaGeW6L5GTDna+R5gFy8nANTCClTj7SFxLhpJtqT18am9uIbZIy5Q==
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/@metamask/utils/-/utils-3.6.0.tgz#b218b969a05ca7a8093b5d1670f6625061de707d"
+  integrity sha512-9cIRrfkWvHblSiNDVXsjivqa9Ak0RYo/1H6tqTqTbAx+oBK2Sva0lWDHxGchOqA7bySGUJKAWSNJvH6gdHZ0gQ==
   dependencies:
     "@types/debug" "^4.1.7"
     debug "^4.3.4"
