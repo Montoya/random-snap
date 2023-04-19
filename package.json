@@ -1,7 +1,7 @@
 {
-  "name": "mystery-snap",
-  "version": "1.2.0",
-  "description": "A simple MetaMask Snap that returns random numbers and answers.",
+  "name": "mystery-fox",
+  "version": "1.2.1",
+  "description": "A simple MetaMask snap that returns random numbers and answers.",
   "repository": {
     "type": "git",
     "url": "https://github.com/Montoya/random-snap.git"
@@ -50,7 +50,7 @@
   },
   "dependencies": {
     "@metamask/rpc-methods": "^0.29.0",
-    "@metamask/snaps-cli": "^0.28.0",
+    "@metamask/snaps-cli": "0.30",
     "@metamask/snaps-types": "^0.29.0",
     "@metamask/snaps-ui": "^0.29.0"
   }

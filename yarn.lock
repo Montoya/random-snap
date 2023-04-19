@@ -1060,6 +1060,17 @@
     immer "^9.0.6"
     nanoid "^3.1.31"
 
+"@metamask/approval-controller@^2.0.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@metamask/approval-controller/-/approval-controller-2.1.0.tgz#4ef461243866029f3c564b2961329da90f8aaa39"
+  integrity sha512-mPDy4Nl3Qy4PhGhNyWfsy2WLTB1x5ffYq9PrNqoDJdQ2KRUM+Y7txTv0NUcfWf3sRhQIyRfxLh3SltTN/s1lxQ==
+  dependencies:
+    "@metamask/base-controller" "^2.0.0"
+    "@metamask/controller-utils" "^3.1.0"
+    eth-rpc-errors "^4.0.0"
+    immer "^9.0.6"
+    nanoid "^3.1.31"
+
 "@metamask/auto-changelog@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@metamask/auto-changelog/-/auto-changelog-3.1.0.tgz#d4d6bc7b9a1244a2e6a8ff1f818540b6491d8d88"
@@ -1078,6 +1089,14 @@
     "@metamask/controller-utils" "^2.0.0"
     immer "^9.0.6"
 
+"@metamask/base-controller@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@metamask/base-controller/-/base-controller-2.0.0.tgz#8f9130df3edaa270ade00378cf57917545d44617"
+  integrity sha512-DppA4/HCabsphVucNRpWA3/mp6m2KhZr/8gidSlpUNLMFqljOKA81GW9nemN3HDqH1RoZdXusI82/4SPEbdbaA==
+  dependencies:
+    "@metamask/controller-utils" "^3.0.0"
+    immer "^9.0.6"
+
 "@metamask/browser-passworder@^4.0.2":
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/@metamask/browser-passworder/-/browser-passworder-4.0.2.tgz#436d7252aad56763baa5e5608e60a170ac9458d7"
@@ -1094,6 +1113,19 @@
     ethjs-unit "^0.1.6"
     fast-deep-equal "^3.1.3"
     isomorphic-fetch "^3.0.0"
+
+"@metamask/controller-utils@^3.0.0", "@metamask/controller-utils@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@metamask/controller-utils/-/controller-utils-3.1.0.tgz#2c49145fb31d6fe68b62f69722cff91372351417"
+  integrity sha512-WPQrWeK32cH0KsLtordUVxrVLgF72aJ3RvKs4TIMnxbzi+tFi7E4DFuEqtJYfszw5YXMy9w/rSoJlrFwIeL+ag==
+  dependencies:
+    "@metamask/utils" "^3.3.1"
+    "@spruceid/siwe-parser" "1.1.3"
+    eth-ens-namehash "^2.0.8"
+    eth-rpc-errors "^4.0.0"
+    ethereumjs-util "^7.0.10"
+    ethjs-unit "^0.1.6"
+    fast-deep-equal "^3.1.3"
 
 "@metamask/eslint-config-jest@^8.0.0":
   version "8.0.0"
@@ -1139,6 +1171,22 @@
     "@metamask/approval-controller" "^1.1.0"
     "@metamask/base-controller" "^1.1.2"
     "@metamask/controller-utils" "^2.0.0"
+    "@metamask/types" "^1.1.0"
+    "@types/deep-freeze-strict" "^1.1.0"
+    deep-freeze-strict "^1.1.1"
+    eth-rpc-errors "^4.0.0"
+    immer "^9.0.6"
+    json-rpc-engine "^6.1.0"
+    nanoid "^3.1.31"
+
+"@metamask/permission-controller@^3.0.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@metamask/permission-controller/-/permission-controller-3.1.0.tgz#0cc9b000a7308e02a3cbdae050c0a3dbb1ae1114"
+  integrity sha512-JSyjR0BAwi76cc8UqIYNGPM20P0ol2b7zwgqV+rXo2mE6Y8ftHOOTK5HOelJxcS5Mx39VhfbwDrAY7VRgJYgHA==
+  dependencies:
+    "@metamask/approval-controller" "^2.0.0"
+    "@metamask/base-controller" "^2.0.0"
+    "@metamask/controller-utils" "^3.1.0"
     "@metamask/types" "^1.1.0"
     "@types/deep-freeze-strict" "^1.1.0"
     deep-freeze-strict "^1.1.1"
@@ -1195,18 +1243,18 @@
     "@noble/hashes" "~1.1.1"
     "@scure/base" "~1.1.0"
 
-"@metamask/snaps-browserify-plugin@^0.28.0":
-  version "0.28.0"
-  resolved "https://registry.yarnpkg.com/@metamask/snaps-browserify-plugin/-/snaps-browserify-plugin-0.28.0.tgz#acd1b67ffdae8b3026cd8bbf8f8c2813b8878e89"
-  integrity sha512-iNkpLM/TYSimpgQvs6CoVKM6WJamWcIgHs2Y9pzJiwOJrvO18NJFNKm+X1dBWP2am58vQn2+GE1+/P5ZPJ24mA==
+"@metamask/snaps-browserify-plugin@^0.30.0":
+  version "0.30.0"
+  resolved "https://registry.yarnpkg.com/@metamask/snaps-browserify-plugin/-/snaps-browserify-plugin-0.30.0.tgz#b50436660c4a796953168409c82808466714c647"
+  integrity sha512-wCqtuBhGm2y7j/e62iW1Kk9rh6hCU1prdtfgNsi+9/ByAe8sXUejGQRwrJOea1J+XhSSLsJX2Vg0Jhqx0GkIhw==
   dependencies:
-    "@metamask/snaps-utils" "^0.28.0"
+    "@metamask/snaps-utils" "^0.30.0"
     convert-source-map "^1.8.0"
 
-"@metamask/snaps-cli@0.28.0":
-  version "0.28.0"
-  resolved "https://registry.yarnpkg.com/@metamask/snaps-cli/-/snaps-cli-0.28.0.tgz#e57a8775967173cfc112ff7b3ac5685778a3cea8"
-  integrity sha512-NFhRxa/o2cwpf4JdE91BqoIREMt+Aadb8aPkSddLjMYp4NS+GR+v8shElfqsXPTtns/GgBq3ao2fL2yWn2JrZw==
+"@metamask/snaps-cli@0.30":
+  version "0.30.0"
+  resolved "https://registry.yarnpkg.com/@metamask/snaps-cli/-/snaps-cli-0.30.0.tgz#b682a84f489ebb2b6cb67ceb7626f4af11be7345"
+  integrity sha512-l14ud6lJWRc5aQ0BLD7mBBlOAKM8Ni+/dGaOFektUTJzBTVjQYNuhOem8YqxkNH5FQY/0Pbf7GdLr0ujdUSvuA==
   dependencies:
     "@babel/core" "^7.16.7"
     "@babel/plugin-proposal-class-properties" "^7.16.7"
@@ -1216,8 +1264,8 @@
     "@babel/plugin-transform-runtime" "^7.16.7"
     "@babel/preset-env" "^7.16.7"
     "@babel/preset-typescript" "^7.16.7"
-    "@metamask/snaps-browserify-plugin" "^0.28.0"
-    "@metamask/snaps-utils" "^0.28.0"
+    "@metamask/snaps-browserify-plugin" "^0.30.0"
+    "@metamask/snaps-utils" "^0.30.0"
     "@metamask/utils" "^3.4.1"
     babelify "^10.0.0"
     browserify "^17.0.0"
@@ -1247,14 +1295,6 @@
     "@metamask/snaps-utils" "^0.29.0"
     "@metamask/utils" "^3.4.1"
 
-"@metamask/snaps-ui@^0.28.0":
-  version "0.28.0"
-  resolved "https://registry.yarnpkg.com/@metamask/snaps-ui/-/snaps-ui-0.28.0.tgz#ac107efd98f2dba9badfee96f99e383779d1d532"
-  integrity sha512-8xh+OJF2oX5DUJfvq7CU/aiG0Q9YoQ9AiwG/qK/gzuedToFqOClwuvjqF3+XOY2FGlJdVNVi+Td30iVUePTGbg==
-  dependencies:
-    "@metamask/utils" "^3.4.1"
-    superstruct "^1.0.3"
-
 "@metamask/snaps-ui@^0.29.0":
   version "0.29.0"
   resolved "https://registry.yarnpkg.com/@metamask/snaps-ui/-/snaps-ui-0.29.0.tgz#22b4261bd507837f04e3273f171a6539b0d696f2"
@@ -1263,27 +1303,13 @@
     "@metamask/utils" "^3.4.1"
     superstruct "^1.0.3"
 
-"@metamask/snaps-utils@^0.28.0":
-  version "0.28.0"
-  resolved "https://registry.yarnpkg.com/@metamask/snaps-utils/-/snaps-utils-0.28.0.tgz#65b4ca96040d134146e356471262a9efd80f59e6"
-  integrity sha512-/LDAKrujIY96gCQQ1AyVlnYey9f2XS/wZLGb98bbywqVECVcVLVxdJGlJGWG5kqoMO3spjzXlT1XEmTvP0Sq2Q==
+"@metamask/snaps-ui@^0.30.0":
+  version "0.30.0"
+  resolved "https://registry.yarnpkg.com/@metamask/snaps-ui/-/snaps-ui-0.30.0.tgz#094d6e73565c4b3e28812ccdd3155dceb32c1aee"
+  integrity sha512-XNt3LQAKN/y5jmu5M0krXC3mJWE9ZJfVgZ2SaZXPVJmPeDnlda8jHwgRznY2NAS50qtRAbxqQu+DVf+b2ExrQQ==
   dependencies:
-    "@babel/core" "^7.18.6"
-    "@babel/types" "^7.18.7"
-    "@metamask/providers" "^10.2.1"
-    "@metamask/snaps-registry" "^1.0.0"
-    "@metamask/snaps-ui" "^0.28.0"
     "@metamask/utils" "^3.4.1"
-    "@noble/hashes" "^1.1.3"
-    "@scure/base" "^1.1.1"
-    cron-parser "^4.5.0"
-    eth-rpc-errors "^4.0.3"
-    fast-deep-equal "^3.1.3"
-    rfdc "^1.3.0"
-    semver "^7.3.7"
-    ses "^0.18.1"
     superstruct "^1.0.3"
-    validate-npm-package-name "^5.0.0"
 
 "@metamask/snaps-utils@^0.29.0":
   version "0.29.0"
@@ -1309,6 +1335,30 @@
     superstruct "^1.0.3"
     validate-npm-package-name "^5.0.0"
 
+"@metamask/snaps-utils@^0.30.0":
+  version "0.30.0"
+  resolved "https://registry.yarnpkg.com/@metamask/snaps-utils/-/snaps-utils-0.30.0.tgz#2d0230147c80954393b399b30f44c50721163d4a"
+  integrity sha512-ejNZV0IpU33bRHW14z5854Ue3thxxnw+xhf1q0B6f8tUGXNKIqm5/OWeQG2t2OxUqV1+/DiIMXZ8Qm+JbIGeLA==
+  dependencies:
+    "@babel/core" "^7.18.6"
+    "@babel/types" "^7.18.7"
+    "@metamask/permission-controller" "^3.0.0"
+    "@metamask/providers" "^10.2.1"
+    "@metamask/snaps-registry" "^1.0.0"
+    "@metamask/snaps-ui" "^0.30.0"
+    "@metamask/utils" "^3.4.1"
+    "@noble/hashes" "^1.1.3"
+    "@scure/base" "^1.1.1"
+    cron-parser "^4.5.0"
+    eth-rpc-errors "^4.0.3"
+    fast-deep-equal "^3.1.3"
+    fast-json-stable-stringify "^2.1.0"
+    rfdc "^1.3.0"
+    semver "^7.3.7"
+    ses "^0.18.1"
+    superstruct "^1.0.3"
+    validate-npm-package-name "^5.0.0"
+
 "@metamask/types@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@metamask/types/-/types-1.1.0.tgz#9bd14b33427932833c50c9187298804a18c2e025"
@@ -1318,6 +1368,16 @@
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/@metamask/utils/-/utils-3.5.0.tgz#2b0050baaefff3e42fd75069d9503a18345c0cee"
   integrity sha512-TqZBbL12VtRL4oz1Z0cubKr4cgxLtLFjgEaGeW6L5GTDna+R5gFy8nANTCClTj7SFxLhpJtqT18am9uIbZIy5Q==
+  dependencies:
+    "@types/debug" "^4.1.7"
+    debug "^4.3.4"
+    semver "^7.3.8"
+    superstruct "^1.0.3"
+
+"@metamask/utils@^3.3.1":
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/@metamask/utils/-/utils-3.6.0.tgz#b218b969a05ca7a8093b5d1670f6625061de707d"
+  integrity sha512-9cIRrfkWvHblSiNDVXsjivqa9Ak0RYo/1H6tqTqTbAx+oBK2Sva0lWDHxGchOqA7bySGUJKAWSNJvH6gdHZ0gQ==
   dependencies:
     "@types/debug" "^4.1.7"
     debug "^4.3.4"
@@ -1369,6 +1429,13 @@
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@scure/base/-/base-1.1.1.tgz#ebb651ee52ff84f420097055f4bf46cfba403938"
   integrity sha512-ZxOhsSyxYwLJj3pLZCefNitxsj093tb2vq90mp2txoYeBqbcjDjqFhyM8eUjq/uFm6zJ+mUuqxlS2FkuSY1MTA==
+
+"@spruceid/siwe-parser@1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@spruceid/siwe-parser/-/siwe-parser-1.1.3.tgz#0eebe8bbd63c6de89cb44c06b6329b00b305df65"
+  integrity sha512-oQ8PcwDqjGWJvLmvAF2yzd6iniiWxK0Qtz+Dw+gLD/W5zOQJiKIUXwslHOm8VB8OOOKW9vfR3dnPBhHaZDvRsw==
+  dependencies:
+    apg-js "^4.1.1"
 
 "@types/bn.js@^5.1.0":
   version "5.1.0"
@@ -1577,6 +1644,11 @@ anymatch@~3.1.2:
   dependencies:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
+
+apg-js@^4.1.1:
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/apg-js/-/apg-js-4.1.3.tgz#0cb9dc99f8830740d7a8f9fc0048fa618ae4d199"
+  integrity sha512-XYyDcoBho8OpnWPRnedMwyL+76ovCtsESerHZEfY39dO4IrEqN97mdEYkOyHa0XTX5+3+U5FmpqPLttK0f7n6g==
 
 argparse@^1.0.7:
   version "1.0.10"

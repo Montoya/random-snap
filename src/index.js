@@ -29,16 +29,17 @@ module.exports.onRpcRequest = async ({ origin, request }) => {
       }
       return Math.random();
     case 'mystery':
-      let mysteryResponse = answers[Math.floor(Math.random() * answers.length)];
+      const mysteryResponse = answers[Math.floor(Math.random() * answers.length)];
+      const question = request.params.question.trim();
       return snap.request({
         method: 'snap_dialog',
         params: {
-          type: 'Alert',  
+          type: 'alert',  
           content: panel([
             text(`**The Mysterious 🦊 Has Spoken**`),
             divider(), 
             text('You asked:'), 
-            text(`_${request.params.question}_`),
+            text(`_${question}_`),
             divider(),
             text('The mysterious fox says:'),
             text(`**${mysteryResponse}**`),

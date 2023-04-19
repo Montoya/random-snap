@@ -1,18 +1,18 @@
 {
-  "version": "1.2.0",
-  "description": "A simple MetaMask Snap that returns random numbers and answers.",
-  "proposedName": "Mystery Snap",
+  "version": "1.2.1",
+  "description": "A simple MetaMask snap that returns random numbers and answers.",
+  "proposedName": "Mystery Fox",
   "repository": {
     "type": "git",
     "url": "https://github.com/Montoya/random-snap.git"
   },
   "source": {
-    "shasum": "Ef7ATj55RnGPAFH+Il9Y8ujKu8Wa6X19MmY8eVp1hJI=",
+    "shasum": "/+/p9W0fzIKXPHI0jnboT0QMpE7bx/HAorGlw+wCDrk=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
         "iconPath": "images/icon.svg",
-        "packageName": "mystery-snap",
+        "packageName": "mystery-fox",
         "registry": "https://registry.npmjs.org/"
       }
     }
