@@ -1,5 +1,5 @@
 {
-  "version": "1.2.1",
+  "version": "2.0.0",
   "description": "A simple MetaMask snap that returns random numbers and answers.",
   "proposedName": "Mystery Fox",
   "repository": {
@@ -7,7 +7,7 @@
     "url": "https://github.com/Montoya/random-snap.git"
   },
   "source": {
-    "shasum": "/+/p9W0fzIKXPHI0jnboT0QMpE7bx/HAorGlw+wCDrk=",
+    "shasum": "wDirutuUj5vsQjaBNpVFcyGNbkx2PT3OrTSUHaDDRT4=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
@@ -22,7 +22,8 @@
       "dapps": true,
       "snaps": true
     },
-    "snap_dialog": {}
+    "snap_dialog": {},
+    "snap_getLocale": {}
   },
   "manifestVersion": "0.1"
 }
