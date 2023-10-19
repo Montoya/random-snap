@@ -2,125 +2,46 @@
 <html>
   <head>
     <title>The Mysterious Fox</title>
-    <link rel="icon" type="image/svg" href="./images/icon.svg"/>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg" href="./images/icon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <style type="text/css">
-      body { background:#222; color:#fafafa; margin:0; padding:0; font-family:'VT323', monospace; }
-      #page { width:100vw; height:100vh; display:flex; justify-content:center; align-items:center;}
-      #content { max-width:30rem; padding:18px; border:0 solid #fafafa; border-radius:2px; }
-      h1, p, input, button { font-size:1.5rem; font-weight:400; font-family:inherit; }
-      a, a:visited, a:focus { color:#fafafa; }
-      input { font-size:1.2rem; background-color:#222; color:#fafafa; border-width:0 0 1px 0; border-color:#fafafa; padding-bottom:2px; outline:none; }
-      #questionInput { width:24rem; }
-      button { background-color:#222; color:#fafafa; border:1px solid #fafafa; border-radius:2px; padding:3px 6px; cursor:pointer; }
-      button:active { border-color:#aaa; color:#aaa; }
-      .connected, #unavailable { display:none; }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
     <div id="page">
       <div id="content">
-        <button class="disconnected" id="connect">Start</button>
-        <h1 class="connected">Ask the mysterious <span id="fox">🦊</span> a question</h1>
-        <p class="connected">&rsaquo; <input type="text" name="question" id="questionInput" value=""> <button id="query">Query</button></p>
-        <p id="unavailable">You need MetaMask Flask to use this dapp.<br><a href="https://metamask.io/flask/">Get MetaMask Flask</a></p>
+        <button class="disconnected" id="connect">
+          <span class="lang-en">Start</span>
+          <span class="lang-es">Iniciar</span>
+        </button>
+        <h1 class="connected">
+          <span class="lang-en">Ask the mysterious</span> 
+          <span class="lang-es">Hazle tu pregunta al</span> 
+          <span id="fox">🦊</span> 
+          <span class="lang-en">a question</span>
+          <span class="lang-es">misterioso</span>
+        </h1>
+        <p class="connected">&rsaquo; <input type="text" name="question" id="questionInput" value=""> 
+          <button id="query">
+            <span class="lang-en">Query</span>
+            <span class="lang-es">Preguntar</span>
+          </button>
+        </p>
+        <p id="unavailable">
+          <span class="lang-en">You need MetaMask Flask to use this dapp.</span> 
+          <span class="lang-es">Necesitas usar MetaMask Flask con este sitio.</span> 
+          <br>
+          <a href="https://metamask.io/flask/">
+            <span class="lang-en">Get MetaMask Flask</span>
+            <span class="lang-es">Descargar MetaMask Flask</span>
+          </a>
+        </p>
       </div>
     </div>
   </body>
 
-  <script>
-    if(window.ethereum===undefined) { 
-      document.getElementById('connect').style.display = 'none'; 
-      document.getElementById('content').style.borderWidth = '1px'; 
-      document.getElementById('unavailable').style.display = 'block'; 
-    }
-    const snapId = `npm:mystery-fox`;
-
-    const connectButton = document.getElementById('connect')
-    const queryText = document.getElementById('questionInput'); 
-    const queryButton = document.getElementById('query')
-
-    document.getElementById('fox').addEventListener('click', (e) => {
-      getRandom();
-    })
-
-    connectButton.addEventListener('click', connect)
-    queryText.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') { 
-        getAnswer()
-      }
-    })
-    queryButton.addEventListener('click', getAnswer)
-
-    // here we get permissions to interact with and install the snap
-    async function connect () {
-      let requestParams = {}; 
-      requestParams[snapId] = {}; 
-      const result = await ethereum.request({
-        method: 'wallet_requestSnaps',
-        params: requestParams, 
-      }); 
-      
-      if(result) { 
-        // user is now connected, enable the dApp UI
-        var elements = document.getElementsByClassName("disconnected");
-        for (var i = 0; i < elements.length; i++) { 
-          var el = elements.item(i); 
-          el.style.display = 'none'; 
-        }
-        document.getElementById('content').style.borderWidth = '1px'; 
-        elements = document.getElementsByClassName("connected"); 
-        for (i = 0; i < elements.length; i++) { 
-          var el = elements.item(i); 
-          el.style.display = 'block'; 
-        }
-        document.getElementById('questionInput').focus(); 
-      }
-    }
-
-    async function getRandom () {
-      try {
-        const response = await ethereum.request({
-          method: 'wallet_invokeSnap',
-          params: { 
-            snapId: snapId, 
-            request: { 
-              method: 'random', 
-            }
-          }
-        }); 
-        alert("Result: " + response); 
-      } catch (err) {
-        console.error(err);
-        alert('Problem happened: ' + err.message || err);
-      }
-    }
-
-    async function getAnswer () {
-      try {
-        const question = document.getElementById('questionInput').value
-        if(question.length > 0) { 
-          const response = await ethereum.request({
-            method: 'wallet_invokeSnap',
-            params: { 
-              snapId: snapId, 
-              request: { 
-                method: 'mystery', 
-                params: { 
-                  question: question, 
-                }
-              }
-            } 
-          }); 
-          document.getElementById('questionInput').value = ''; 
-          document.getElementById('questionInput').focus(); 
-        }
-      } catch (err) {
-        console.error(err); 
-      }
-    }
-  </script>
+  <script type="text/javascript" src="page.js"></script>
 </html>

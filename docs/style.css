@@ -1,0 +1,11 @@
+body { background:#222; color:#fafafa; margin:0; padding:0; font-family:'VT323', monospace; }
+#page { width:100vw; height:100vh; display:flex; justify-content:center; align-items:center;}
+#content { max-width:30rem; padding:18px; border:0 solid #fafafa; border-radius:2px; }
+h1, p, input, button { font-size:1.5rem; font-weight:400; font-family:inherit; }
+a, a:visited, a:focus { color:#fafafa; }
+input { font-size:1.2rem; background-color:#222; color:#fafafa; border-width:0 0 1px 0; border-color:#fafafa; padding-bottom:2px; outline:none; }
+#questionInput { width:24rem; }
+button { background-color:#222; color:#fafafa; border:1px solid #fafafa; border-radius:2px; padding:3px 6px; cursor:pointer; }
+button:active { border-color:#aaa; color:#aaa; }
+.connected, #unavailable { display:none; }
+.lang-es { display:none; }
