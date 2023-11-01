@@ -108,6 +108,8 @@ This repository includes a simple dApp website that uses the Snap published to n
 
 Crystal Ball icon by [OpenMoji](https://openmoji.org/).
 
+Fox Image by [pch.vector](https://www.freepik.com/free-vector/set-cartoon-fox-character-getting-angry-meditating-sitting-lotus-pose-smiling_35159972.htm#page=3&query=fox%20svg&position=20&from_view=keyword&track=ais) on Freepik
+
 ## License
 
 This project is dual-licensed under Apache 2.0 and MIT terms:
