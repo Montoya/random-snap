@@ -1,6 +1,6 @@
 {
   "name": "mystery-fox",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A simple MetaMask snap that returns random numbers and answers.",
   "repository": {
     "type": "git",
@@ -27,18 +27,22 @@
     "lint:changelog": "yarn auto-changelog validate"
   },
   "devDependencies": {
-    "@metamask/auto-changelog": "^3.1.0",
-    "@metamask/eslint-config": "^8.0.0",
-    "@metamask/eslint-config-jest": "^8.0.0",
-    "@metamask/eslint-config-nodejs": "^8.0.0",
-    "eslint": "^7.30.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-jest": "^24.4.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "mkdirp": "^1.0.4",
-    "prettier": "^2.3.2",
+    "@metamask/auto-changelog": "^3.4.2",
+    "@metamask/eslint-config": "^12.0.0",
+    "@metamask/eslint-config-jest": "^12.0.0",
+    "@metamask/eslint-config-nodejs": "^12.0.0",
+    "@metamask/snaps-cli": "^3.0.1",
+    "eslint": "^8.45.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "~2.26.0",
+    "eslint-plugin-jest": "^27.1.5",
+    "eslint-plugin-jsdoc": "^41.1.2",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "jest": "^29.5.0",
+    "prettier": "^2.7.1",
+    "prettier-plugin-packagejson": "^2.2.11",
     "rimraf": "^3.0.2"
   },
   "publishConfig": {
@@ -46,12 +50,11 @@
     "registry": "https://registry.npmjs.org/"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=18.16.0"
   },
   "dependencies": {
-    "@metamask/rpc-methods": "^0.29.0",
-    "@metamask/snaps-cli": "0.30",
-    "@metamask/snaps-types": "^0.29.0",
-    "@metamask/snaps-ui": "^0.29.0"
+    "@metamask/snaps-types": "^3.0.1",
+    "@metamask/snaps-ui": "^3.0.1",
+    "buffer": "^6.0.3"
   }
 }
