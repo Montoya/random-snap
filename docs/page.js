@@ -21,7 +21,7 @@ if(window.ethereum===undefined) {
   document.getElementById('unavailable').style.display = 'block'; 
 }
 const snapId = `npm:mystery-fox`;
-const snapVersion = '2.0.0'; 
+const snapVersion = '3.0.0'; 
 
 const connectButton = document.getElementById('connect')
 const queryText = document.getElementById('questionInput'); 
